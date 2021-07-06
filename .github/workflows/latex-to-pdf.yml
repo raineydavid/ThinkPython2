@@ -3,10 +3,6 @@ name: latex-to-pdf-generator
 
 on: push
 
-branding:
-  icon: 'zap'
-  color: 'blue'
-
 jobs:
   build:
     runs-on: ubuntu-latest
