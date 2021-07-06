@@ -32,10 +32,7 @@ jobs:
       
     - name: Push pdf
       run: |
-        git checkout --orphan ${GITHUB_REF##*/}-pdf
-        git rm -rf .github/
         cd ${MANUSCRIPT_PATH%/*}
-        git rm -rf . 
         git add -f ${MANUSCRIPT_PATH##*/}.pdf 
         git commit -m "Update book"
         git push 
