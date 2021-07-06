@@ -23,6 +23,12 @@ jobs:
       run: |
         cd ${MANUSCRIPT_PATH%/*}
         ${LATEX} ${MANUSCRIPT_PATH##*/}.tex
+        
+    - name: Setup git config
+      run: |
+          # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
       
     - name: Push pdf
       run: |
@@ -31,4 +37,5 @@ jobs:
         cd ${MANUSCRIPT_PATH%/*}
         git rm -rf . 
         git add -f ${MANUSCRIPT_PATH##*/}.pdf 
-        git push -q -f https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} ${GITHUB_REF##*/}-pdf
+        git commit -m "Update book"
+        git push 
