@@ -1,5 +1,5 @@
 name: latex-to-pdf-generator
-description: Automagically build LaTex manuscripts and push the latest PDF back to GitHub
+# Build LaTex manuscripts and push the latest PDF back to GitHub
 
 on: push
 
