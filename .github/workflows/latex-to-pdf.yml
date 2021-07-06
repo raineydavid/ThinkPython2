@@ -1,4 +1,4 @@
-name: latex-to-pdf-generator
+name: Latex To PDF generator
 # Build LaTex manuscripts and push the latest PDF back to GitHub
 
 on: push
