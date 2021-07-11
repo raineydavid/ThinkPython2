@@ -37,11 +37,11 @@ jobs:
         run: |
           cp ${MANUSCRIPT_PATH##*/}.pdf downloads/.
           
-    - name: Step 3 - Use the Upload Artifact GitHub Action
-        uses: actions/upload-artifact@v2
-        with: 
-          name: assets-for-download
-          path: downloads
+   # - name: Step 3 - Use the Upload Artifact GitHub Action
+    #    uses: actions/upload-artifact@v2
+     #   with: 
+        #  name: assets-for-download
+         # path: downloads
       
    # - name: Push pdf
    #   run: |
